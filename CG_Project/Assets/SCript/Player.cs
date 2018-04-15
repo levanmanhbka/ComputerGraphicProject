@@ -61,6 +61,11 @@ public class Player : MonoBehaviour {
             Flip();
         }
 
+        if (grounded)
+        {
+            r2.velocity = new Vector2(r2.velocity.x * 0.7f, r2.velocity.y);
+        }
+
     }
 
     public void Flip()
