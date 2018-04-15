@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     public float speed = 50f, maxspeed = 3, jumpPow = 220f;
-    public bool grounded = true, faceright = true;
+    public bool grounded = true, faceright = true, doublejump = false;
 
     public Rigidbody2D r2;
     public Animator anim;
@@ -25,7 +25,18 @@ public class Player : MonoBehaviour {
             if (grounded)
             {
                 grounded = false;
+                doublejump = true;
                 r2.AddForce(Vector2.up * jumpPow);
+
+            }
+            else
+            {
+                if (doublejump)
+                {
+                    doublejump = false;
+                    r2.velocity = new Vector2(r2.velocity.x, 0);
+                    r2.AddForce(Vector2.up * jumpPow * 0.7f);
+                }
             }
         }
 	}
