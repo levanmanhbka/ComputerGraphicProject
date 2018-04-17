@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
     public float speed = 50f, maxspeed = 3, jumpPow = 220f;
@@ -9,10 +10,15 @@ public class Player : MonoBehaviour {
     public Rigidbody2D r2;
     public Animator anim;
 
+    // ThanhND : Create HP
+    public int ourHealth;
+    public int maxHealth = 5;
+
 	// Use this for initialization
 	void Start () {
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
+        ourHealth = maxHealth;
 	}
 	
 	// Update is called once per frame
@@ -66,6 +72,12 @@ public class Player : MonoBehaviour {
             r2.velocity = new Vector2(r2.velocity.x * 0.7f, r2.velocity.y);
         }
 
+        // ThanhND : check HP
+        if (ourHealth <= 0)
+        {
+            Death();
+        }
+
     }
 
     public void Flip()
@@ -76,4 +88,11 @@ public class Player : MonoBehaviour {
         Scale.x *= -1;
         transform.localScale = Scale;
     }
+
+    // ThanhND : when player died (hp < 2) return Game
+    public void Death()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
