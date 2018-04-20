@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\SCript\AttackTrigger.cs" />
+     <Compile Include="Assets\SCript\BOX.cs" />
      <Compile Include="Assets\SCript\CameraFollow.cs" />
      <Compile Include="Assets\SCript\FallingFlat.cs" />
      <Compile Include="Assets\SCript\GroundCheck.cs" />
