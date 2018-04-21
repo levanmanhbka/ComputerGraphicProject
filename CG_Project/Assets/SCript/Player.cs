@@ -106,7 +106,7 @@ public class Player : MonoBehaviour {
     {
         Debug.Log("manh.lv Player Damage " + damage);
         ourHealth -= damage;
-        gameObject.GetComponent<Animation>().Play("redFlash");
+        // gameObject.GetComponent<Animation>().Play("redFlash");
     }
 
     public void Knockback(float Knockpow, Vector2 Knockdir)

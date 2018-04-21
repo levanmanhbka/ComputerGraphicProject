@@ -1352,7 +1352,6 @@ GameObject:
   - component: {fileID: 1466402712}
   - component: {fileID: 1466402713}
   - component: {fileID: 1466402714}
-  - component: {fileID: 1466402715}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1554,21 +1553,6 @@ MonoBehaviour:
   attacking: 0
   anim: {fileID: 0}
   trigger: {fileID: 1506390844}
---- !u!111 &1466402715
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1466402705}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 0}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1506390842
 GameObject:
   m_ObjectHideFlags: 0
