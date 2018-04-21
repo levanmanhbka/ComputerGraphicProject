@@ -18,7 +18,7 @@ public class HearUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Heart.sprite = Heartsprite[player.ourHealth];
+        Heart.sprite = Heartsprite[Mathf.Clamp(player.ourHealth, 0, 5)];
         
 	}
 }

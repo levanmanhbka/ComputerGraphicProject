@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
-    public float speed = 50f, maxspeed = 3, jumpPow = 220f;
+    public float speed = 50f, maxspeed = 3, maxjump = 4, jumpPow = 220f;
     public bool grounded = true, faceright = true, doublejump = false;
 
     public Rigidbody2D r2;
@@ -57,6 +57,11 @@ public class Player : MonoBehaviour {
         if (r2.velocity.x < -maxspeed)
             r2.velocity = new Vector2(-maxspeed, r2.velocity.y);
 
+        if (r2.velocity.y > maxjump)
+            r2.velocity = new Vector2(r2.velocity.x, maxjump);
+        if (r2.velocity.y < -maxjump)
+            r2.velocity = new Vector2(r2.velocity.x, -maxjump);
+
         if (h > 0 && !faceright)
         {
             Flip();
@@ -92,7 +97,22 @@ public class Player : MonoBehaviour {
     // ThanhND : when player died (hp < 2) return Game
     public void Death()
     {
+        Debug.Log("Player Death ");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+
+    public void Damage(int damage)
+    {
+        Debug.Log("manh.lv Player Damage " + damage);
+        ourHealth -= damage;
+        gameObject.GetComponent<Animation>().Play("redFlash");
+    }
+
+    public void Knockback(float Knockpow, Vector2 Knockdir)
+    {
+        Debug.Log("manh.lv Player Knockback ");
+        r2.velocity = new Vector2(0, 0);
+        r2.AddForce(new Vector2(Knockdir.x * -30, Knockdir.y * Knockpow));
+    }
 }

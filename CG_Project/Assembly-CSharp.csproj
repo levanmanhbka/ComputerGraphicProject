@@ -60,6 +60,7 @@
      <Compile Include="Assets\SCript\MovingFlat.cs" />
      <Compile Include="Assets\SCript\Player.cs" />
      <Compile Include="Assets\SCript\PlayerAttack.cs" />
+     <Compile Include="Assets\SCript\Spikes.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>D:/GitHub/ComputerGraphicProject/CG_Project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
