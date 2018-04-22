@@ -450,31 +450,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102891562691382186
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: redFlash
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4459673889944ab43ba399a0a77cc4f5, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &1102963647975137780
 AnimatorState:
   serializedVersion: 5
@@ -549,7 +524,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102963647975137780}
-    m_Position: {x: 288, y: 120, z: 0}
+    m_Position: {x: 312, y: 132, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102151980198669350}
     m_Position: {x: 576, y: 120, z: 0}
@@ -559,9 +534,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102191177872078284}
     m_Position: {x: 432, y: 204, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102891562691382186}
-    m_Position: {x: 467, y: 269, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
