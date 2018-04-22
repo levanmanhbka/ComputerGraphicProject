@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * by TrangNTH
+*/
+
 public class AttackTrigger : MonoBehaviour {
 	//khi va cham voi ke thu luong damage=huhai=20
 	public int dmg=20;

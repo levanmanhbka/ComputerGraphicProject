@@ -51,8 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\SCript\AttackCone.cs" />
      <Compile Include="Assets\SCript\AttackTrigger.cs" />
      <Compile Include="Assets\SCript\BOX.cs" />
+     <Compile Include="Assets\SCript\Bullet.cs" />
      <Compile Include="Assets\SCript\CameraFollow.cs" />
      <Compile Include="Assets\SCript\FallingFlat.cs" />
      <Compile Include="Assets\SCript\GroundCheck.cs" />
@@ -60,6 +62,7 @@
      <Compile Include="Assets\SCript\MovingFlat.cs" />
      <Compile Include="Assets\SCript\Player.cs" />
      <Compile Include="Assets\SCript\PlayerAttack.cs" />
+     <Compile Include="Assets\SCript\TurretAI.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/tranght/Documents/GitHub/ComputerGraphicProject/CG_Project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
