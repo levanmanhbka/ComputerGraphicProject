@@ -14,6 +14,11 @@ public class Player : MonoBehaviour {
     public int ourHealth;
     public int maxHealth = 5;
 
+    public GameObject bullet;
+    public float bulletspeed = 5;
+    public float bullettimer = 0;
+    public float shootinterval = 0.5f;
+
 	// Use this for initialization
 	void Start () {
         r2 = gameObject.GetComponent<Rigidbody2D>();
@@ -44,6 +49,10 @@ public class Player : MonoBehaviour {
                     r2.AddForce(Vector2.up * jumpPow * 0.7f);
                 }
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            Shoot();
         }
 	}
 
@@ -114,5 +123,40 @@ public class Player : MonoBehaviour {
         Debug.Log("manh.lv Player Knockback ");
         r2.velocity = new Vector2(0, 0);
         r2.AddForce(new Vector2(Knockdir.x * -30, Knockdir.y * Knockpow));
+    }
+
+    public void Shoot()
+    {
+        Debug.Log("Player Shoot");
+        bullettimer += Time.deltaTime;
+
+        if (bullettimer >= shootinterval)
+        {
+            Vector3 position = transform.position;
+            if (faceright)
+            {
+                GameObject bulletclone;
+                position.x += 1;
+                Vector2 direction = position - transform.position;
+                direction.Normalize();
+                bulletclone = Instantiate(bullet, position, transform.rotation) as GameObject;
+                bulletclone.GetComponent<Rigidbody2D>().velocity = direction * bulletspeed;
+
+                bullettimer = 0;
+            }
+
+            if (!faceright)
+            {
+                GameObject bulletclone;
+                position.x -= 1;
+                Vector2 direction = position - transform.position;
+                direction.Normalize();
+                bulletclone = Instantiate(bullet, position, transform.rotation) as GameObject;
+                bulletclone.GetComponent<Rigidbody2D>().velocity = direction * bulletspeed;
+
+                bullettimer = 0;
+            }
+        }
+        
     }
 }

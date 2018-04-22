@@ -23,6 +23,11 @@ public class Bullet : MonoBehaviour {
                 col.SendMessageUpwards("Damage", 1);
                 Debug.Log("Bullet col.SendMessageUpwards ");
             }
+            else if (col.CompareTag("Enemy"))
+            {
+                col.SendMessageUpwards("Damage", 20);
+                Debug.Log("Bullet col.SendMessageUpwards ");
+            }
             Destroy(gameObject);
         }
 

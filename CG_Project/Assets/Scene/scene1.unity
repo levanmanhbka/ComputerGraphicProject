@@ -2268,6 +2268,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   ourHealth: 0
   maxHealth: 5
+  bullet: {fileID: 1450746147079172, guid: a042f5b71ee569c40a0de7cce2e94d1a, type: 2}
+  bulletspeed: 5
+  bullettimer: 0.5
+  shootinterval: 0.5
 --- !u!61 &1466402712
 BoxCollider2D:
   m_ObjectHideFlags: 0
