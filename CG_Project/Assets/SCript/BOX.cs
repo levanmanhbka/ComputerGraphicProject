@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * by TrangNTH
-*/
-
 public class BOX : MonoBehaviour {
 	//dat mau cho box
 	public int Health=100;

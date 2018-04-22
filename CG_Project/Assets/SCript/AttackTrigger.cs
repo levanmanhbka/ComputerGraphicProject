@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * by TrangNTH
-*/
-
 public class AttackTrigger : MonoBehaviour {
 	//khi va cham voi ke thu luong damage=huhai=20
 	public int dmg=20;
 	//chi tan cong nhung thu khong phai la trigger va co tag enemy
 
-	private void OnTriggerEnter2D(Collider col){
-		if((col.isTrigger !=true && col.CompareTag("Enemy")))
-			{
-			col.SendMessageUpwards("Damage",dmg);
-		}
-	}
+
+     private void OnTriggerEnter2D(Collider2D col)
+    {
+       Debug.Log("AttackTrigger OnTriggerEnter2D");
+       if ((col.isTrigger != true && col.CompareTag("Enemy")))
+       {
+           col.SendMessageUpwards("Damage", dmg);
+       }
+    }
 }

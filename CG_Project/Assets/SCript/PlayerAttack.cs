@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
- * By TrangNTH
-*/
 
 public class PlayerAttack : MonoBehaviour {
 	public float attackdelay = 0.3f;
